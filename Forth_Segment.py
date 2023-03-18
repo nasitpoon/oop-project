@@ -23,7 +23,4 @@ class BookingHistory:
         self.__date = date
         self.__nights = nights
     pass
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Ter
+
