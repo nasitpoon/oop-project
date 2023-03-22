@@ -13,7 +13,7 @@ class PaymentStatus(Enum):
 
 
 class Stays:
-    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description):
+    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, contact):
         self._name = name
         self._room_number = room_number
         self._bed_type = bed_type
@@ -37,21 +37,89 @@ class Stays:
 
 class Rooms(Stays):
     def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room):
-        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room)
+        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room):
+        self._contact = contact
+    
+    # def all_room():
+    #     room1 = {
+    #         "name" : "Chao Phraya Room",
+    #         "details" : "Located in the Garden Wing, these rooms with either a flat or split-level layout, offer a residential ambience. The rooms are the epitome of classic elegance with a colonial inspired contemporary interior design that reflects the hotel unique heritage and Thai culture. The 35sqm rooms also enjoy floor-to-ceiling windows overlooking the river and garden."
+    #     }
+    #     room2 = {
+    #         "name" : "Deluxe Balcony Room",
+    #         "details" : "Each of these rooms boasts a private 6sqm balcony on which to relax and enjoy views of the bustling river life and the pool. With floor-to-ceiling windows, wooden floors, rugs and furnishings inspired by nature, soft natural tones and Thai décor, these 37sqm rooms add to the overall resort-style ambience."
+    #     }
+    #     room3 = {
+    #         "name" : "Deluxe Premier Room",
+    #         "details" : "These 43sqm rooms are located in the River Wing and each boast a large sofa to relax and enjoy river and pool views. Décor is inspired by life on the Chao Phraya river with wooden floors and Thai touches such as teak furniture and beautiful Thai silk fabrics, while a selection of prints from the hotels rich collection of artworks adorn the walls. Both king and twin beds are available."
+    #     }
+    #     room4 = {
+    #         "name" : "Mandarin Room",
+    #         "details" : ""
+    #     }
+
+# 
+room_ChaoPhrayaRoom = Stays("Chao Phraya Room",
+                            0,
+                            "King Bed",
+                            "63SQM / 677SQF",
+                            "Bath tub and Japanese toilet";
+                            "Complimentary",
+                            "Bluetooth Speaker",
+                            "Coffee Machine",
+                            "Goose Down Bedding by Ploh",    
+                            "The ideal choice for guests looking for more space, these large 63sqm rooms incorporate a spacious seating area with a sofa; dining area overlooking both the city and river through floor-to-ceiling windows. The décor is light with soothing aqua and gold tones balanced with a selection of furnishings upholstered in the finest Thai silks, along with a king-size bed swathed in luxurious linen. The room also features a vanity area and walk-in closet.",
+                            "Balcony with Seating, Spacious Living with Sofa, Dining Area For 2, 24-Hour Butler Service, Walk-in Closet",
+                            "These rooms feature floor-to-ceiling windows that open out to a balcony with views across the city and river. The bedroom incorporates a spacious seating area with a large comfortable sofa and a dining table.",
+                            "48 Oriental Avenue Bangkok, 10500 Thailand +66 (0) 2 659 9000")
+
+room_Deluxebalcony = Stays("Deluxe Balcony Room",
+                          0,
+                          "King Bed",
+                          "37SQM / 397SQF"
+                          "Japanese Toilets"
+                          "Complimentary",
+                          "Bluetooth Speaker",
+                          "Coffee Machine",
+                          "Goose Down Bedding by Ploh",
+                          "Each of these rooms boasts a private 6sqm balcony on which to relax and enjoy views of the bustling river life and the pool. With floor-to-ceiling windows, wooden floors, rugs and furnishings inspired by nature, soft natural tones and Thai décor, these 37sqm rooms add to the overall resort-style ambience.",
+                          "Floor-To-Ceiling Windows, Balcony with Seating, Bathtub & Walk-In Shower, 24-Hour Butler Service",
+                          "Elegant rooms with wooden floors, nature inspired rugs and furnishings with a private balcony and seating area. The rooms offer a Thai touch, giving a unique experience in a resort-style ambience with pool and river views.",
+                          "48 Oriental Avenue Bangkok, 10500 Thailand +66 (0) 2 659 9000")
+
+room_Deluxepremier = Stays("Deluxe Premier Room",
+                           0,
+                           "King Bed/Twin Beds",
+                           "43SQM / 463SQF",
+                           "Japanese Toilets",
+                           "Complimentary",
+                           "Bluetooth Speaker",
+                           "Coffee Machine",
+                           "Goose Down Bedding by Ploh",
+                           "These 43sqm rooms are located in the River Wing and each boast a large sofa to relax and enjoy river and pool views. Décor is inspired by life on the Chao Phraya river with wooden floors and Thai touches such as teak furniture and beautiful Thai silk fabrics, while a selection of prints from the hotels rich collection of artworks adorn the walls. Both king and twin beds are available.",
+                           "River View, Bathtub & Walk-In Shower, 24-Hour Butler Service, Corner Sofa")
+class Rooms(Stays):
+    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, contact):
+        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, contact):
         self._reserved_room = []
     
     def selected_room(room, suite):
         pass
 
+
 class Suites(Stays):
     def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, bedroom, connecting, powder_room):
         Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room)
+
+
+class Suites(Stays):
+    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, contact, bedroom, connecting, powder_room):
+        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, contact):
         self._bedroom = bedroom
         self._connecting = connecting
         self._powder_room = powder_room
         self._reserved_room = []
     pass
-
 
 
 
@@ -325,6 +393,7 @@ room_Oriental2bedroomSuite = Stays(name = "Oriental 2-Bedroom Suite",
 #show data
 # Stays._showdata(room_Chaophraya)
 print(vars(room_Chaophraya))
+
 
 class RoomCatalog:
     def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, room_count, contact):
