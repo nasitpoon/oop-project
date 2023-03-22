@@ -472,3 +472,4 @@ class BookStays:
     def create_booking(option):
         pass
 
+#new
