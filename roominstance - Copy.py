@@ -1,62 +1,7 @@
-from enum import Enum
-
-class BookingStatus(Enum):
-    PENDING, CONFIRMED, CANCELLED = 1, 2, 3
-    
-
-class RoomStatus(Enum):
-    AVAILABLE, UNAVAILBLE = 1, 2
-
-
-class PaymentStatus(Enum):
-    UNPAID, PENDING, COMPLETE, CANCELLED, REFUNDED = 1, 2, 3, 4, 5
-
-
-class Stays:
-    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description):
-        self._name = name
-        self._room_number = room_number
-        self._bed_type = bed_type
-        self._size = size
-        self._toilet_type = toilet_type
-        self._complimentary = complimentary
-        self._speaker = speaker
-        self._coffee_machine = coffee_machine
-        self._bathrobes = bathrobes
-        self._details = details
-        self._highlights = highlights
-        self._description = description
-        # self._number_of_room = number_of_room
-        self._contact = "48 Oriental Avenue, Bangkok 10500, Thailand +66 (0) 2 659 9000 mobkk-reservations@mohg.com"
-    
-    def _showdata(self):
-        print(self._name)
-        print(self._contact)
-        
-
-
-class Rooms(Stays):
-    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room):
-        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room)
-        self._reserved_room = []
-    
-    def selected_room(room, suite):
-        pass
-
-class Suites(Stays):
-    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room, bedroom, connecting, powder_room):
-        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, number_of_room)
-        self._bedroom = bedroom
-        self._connecting = connecting
-        self._powder_room = powder_room
-        self._reserved_room = []
-    pass
-
-
-
-
+from class import Class
+import class as c
 # all room
-room_Chaophraya = Stays(name = "Chao Phraya Room",
+room_Chaophraya = Rooms(name = "Chao Phraya Room",
                         room_number = 0,
                         bed_type = "King Bed",
                         size = "35SQM / 377SQF",
@@ -70,7 +15,8 @@ room_Chaophraya = Stays(name = "Chao Phraya Room",
                         description = "This luxurious room has an entrance area leading to both a spacious and comfortable bedroom and a separate living area with a comfortable sofa."
                         )
 
-room_Deluxebalcony = Stays(name = "Deluxe Balcony Room",
+
+room_Deluxebalcony = Rooms(name = "Deluxe Balcony Room",
                           room_number = 0,
                           bed_type = "King Bed",
                           size = "37SQM / 397SQF",
@@ -84,7 +30,7 @@ room_Deluxebalcony = Stays(name = "Deluxe Balcony Room",
                           description = "Elegant rooms with wooden floors, nature inspired rugs and furnishings with a private balcony and seating area. The rooms offer a Thai touch, giving a unique experience in a resort-style ambience with pool and river views.",
                         )
 
-room_Deluxepremier = Stays(name = "Deluxe Premier Room",
+room_Deluxepremier = Rooms(name = "Deluxe Premier Room",
                            room_number = 0,
                            bed_type = "King Bed / Twin Beds",
                            size = "43SQM / 463SQF",
@@ -98,7 +44,7 @@ room_Deluxepremier = Stays(name = "Deluxe Premier Room",
                            description = "Large rooms with sofa and sitting area to relax, offer wooden floors and nature inspired rugs and furnishing with a Thai touch giving a unique experience in a resort style ambiance with views of the river and city."
                             )
 
-room_Madarin = Stays(name = "Mandarin Room",
+room_Madarin = Rooms(name = "Mandarin Room",
                      room_number = 0,
                      bed_type = "King Bed",
                      size = "63SQM / 677SQF",
@@ -112,7 +58,7 @@ room_Madarin = Stays(name = "Mandarin Room",
                      description = "These rooms feature floor-to-ceiling windows that open out to a balcony with views across the city and river. The bedroom incorporates a spacious seating area with a large comfortable sofa and a dining table."
                     )
 
-room_State = Stays(name = "State Room",
+room_State = Rooms(name = "State Room",
                    room_number = 0,
                    bed_type = "King Bed / Twin Beds",
                    size = "61SQM / 657SQF",
@@ -126,7 +72,7 @@ room_State = Stays(name = "State Room",
                    description = "This luxurious rooms offers an amazing Thai experience, the décor features colourful Thai silks by Jim Thompson and teak wood panelling & wooden floors. The rooms are directly river facing & offer dramatic views from the balcony."
                    )
 
-room_JuniorterraceSuite = Stays(name = "Junior Terrace Suite",
+room_JuniorterraceSuite = Suites(name = "Junior Terrace Suite",
                                 room_number = 0,
                                 bed_type = "King Bed",
                                 size = "97SQM / 1,043SQF",
@@ -140,35 +86,7 @@ room_JuniorterraceSuite = Stays(name = "Junior Terrace Suite",
                                 description = "This large junior suite is ideal for long-staying guests looking for a large open plan space with a combined sitting and dining area. It features a wonderful terrace of 17sqm/188sqf and a working desk."
                                 )
 
-room_DeluxeonebedroomthemeSuite = Stays(name = "Deluxe One-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King Bed / Twin Beds",
-                                        size = "83SQM / 892SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
-                                        highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
-                                        description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet."
-                                        )
-
-room_Delux2bedroomthemeSuite = Stays(name = "Deluxe 2-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King/Twin Beds / Twins/Twin Beds",
-                                        size = "125SQM / 1,344SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "The suites feature a spacious living area with a large sofa, beautiful wooden floors, decorated in Thai silks in warm tones. The living area offers a separate sitting and dining areas perfect to relax while at the same time allowing privacy for each room. The Master bedroom has a dressing and sitting area with a large walk in closet. The bathroom features Italian marble with double vanities and a separate shower and bath.",
-                                        highlights = "Two Bedrooms, Master Bedroom with Large Walk-in Closet, Balcony with Seating, Spacious Living Room, Dining Area For 4, 24-Hour Butler Service",
-                                        description = "An ideal suite for families this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind."
-                                        )
-
-room_ChaophrayaSuite = Stays(name = "Chao Phraya Suite",
+room_ChaophrayaSuite = Suites(name = "Chao Phraya Suite",
                              room_number = 0,
                              bed_type = "King Bed",
                              size = "83SQM / 892SQF",
@@ -182,7 +100,7 @@ room_ChaophrayaSuite = Stays(name = "Chao Phraya Suite",
                              description = "Floor-to-ceiling windows overlook the river and our gardens. The elegant bedroom features a large marble bathroom with separate bath, a walk-in shower and a walk-in wardrobe. There is also a living area, dining room and balcony."
                             )
 
-room_AuthorsSuite = Stays(name = "Authors' Suites",
+room_AuthorsSuite = Suites(name = "Authors' Suites",
                           room_number = 0,
                           bed_type = "King Bed / Twin Beds",
                           size = "101SQM / 1,861SQF",
@@ -196,7 +114,7 @@ room_AuthorsSuite = Stays(name = "Authors' Suites",
                           description = "Located in the River Wing, these suites are tributes to some of the great literary figures that have stayed with us. All feature floor-to-ceiling windows, a balcony, spacious sitting room, a large bathroom and powder room."
                         )
 
-room_DeluxeonebedroomthemeSuite = Stays(name = "Deluxe One-Bedroom Theme Suite",
+room_Deluxe1bedroomSuite = Suites(name = "Deluxe One-Bedroom Theme Suite",
                                         room_number = 0,
                                         bed_type = "King Bed / Twin Beds",
                                         size = "83SQM / 892SQF",
@@ -210,7 +128,7 @@ room_DeluxeonebedroomthemeSuite = Stays(name = "Deluxe One-Bedroom Theme Suite",
                                         description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
                                         )
 
-room_DeluxetwobedroomthemeSuite = Stays(name = "Deluxe Two-Bedroom Theme Suite",
+room_Deluxe2bedroomSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
                                         room_number = 0,
                                         bed_type = "King/Twin Beds / Twin/Twin Beds",
                                         size = "125SQM / 1,344SQF",
@@ -224,7 +142,35 @@ room_DeluxetwobedroomthemeSuite = Stays(name = "Deluxe Two-Bedroom Theme Suite",
                                         description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
                                         )
 
-room_Premier1bedroom = Stays(name = "Premier 1-Bedroom Suite",
+room_Deluxe1bedroomthemeSuite = Suites(name = "Deluxe One-Bedroom Theme Suite",
+                                        room_number = 0,
+                                        bed_type = "King Bed / Twin Beds",
+                                        size = "83SQM / 892SQF",
+                                        toilet_type = "Japanese Toilets",
+                                        complimentary = "Complimentary",
+                                        speaker = "Bose Sound Bar",
+                                        coffee_machine = True,
+                                        bathrobes = "Silk Kimonos",
+                                        details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
+                                        highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
+                                        description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
+                                        )
+
+room_Deluxe2bedroomthemeSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
+                                        room_number = 0,
+                                        bed_type = "King/Twin Beds / Twin/Twin Beds",
+                                        size = "125SQM / 1,344SQF",
+                                        toilet_type = "Japanese Toilets",
+                                        complimentary = "Complimentary",
+                                        speaker = "Bose Sound Bar",
+                                        coffee_machine = True,
+                                        bathrobes = "Silk Kimonos",
+                                        details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
+                                        highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
+                                        description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
+                                        )
+
+room_Premier1bedroom = Suites(name = "Premier 1-Bedroom Suite",
                             room_number = 0,
                             bed_type = "King Bed / Twin Beds",
                             size = "108SQM / 1,163SQF",
@@ -238,7 +184,7 @@ room_Premier1bedroom = Stays(name = "Premier 1-Bedroom Suite",
                             description = "This luxurious suite has an entrance area leading to a spacious sitting area & desk with a separate dining area for 5 people. It has a private balcony with seating area. The specious bedroom has a dressing table and sitting area."
                              )
 
-room_Premier2bedroomSuite = Stays(name = "Premier 2-Bedroom Suite",
+room_Premier2bedroomSuite = Suites(name = "Premier 2-Bedroom Suite",
                                   room_number = "0",
                                   bed_type = "King/Twin Beds / Twin/Twin Beds",
                                   size = "150SQM / 1,615SQF",
@@ -252,7 +198,7 @@ room_Premier2bedroomSuite = Stays(name = "Premier 2-Bedroom Suite",
                                   description = "Two Bedrooms, Balcony with Seating, Dining Area For 5, 24-Hour Butler Service"
                                   )
 
-room_SiamonebedroomSuite = Stays(name = "Siam One-Bedroom Suite",
+room_Siam1bedroomSuite = Suites(name = "Siam One-Bedroom Suite",
                                  room_number = 0,
                                  bed_type = "King Bed",
                                  size = "107SQM / 1,152SQF",
@@ -266,7 +212,7 @@ room_SiamonebedroomSuite = Stays(name = "Siam One-Bedroom Suite",
                                  description = "Inspired by the beauty of Northern Thailand, this exquisite one bedroom suite features a separate elegant living and dining spaces, a large King size bed with dressing area. As well as a balcony and sitting area."
                                  )
 
-room_Ambassador2bedroomSuite = Stays(name = "Ambassador 2-Bedroom Suite",
+room_Ambassador2bedroomSuite = Suites(name = "Ambassador 2-Bedroom Suite",
                                      room_number = 0,
                                      bed_type = "King/Twin Beds",
                                      size = "173SQM / 567SQF",
@@ -280,7 +226,7 @@ room_Ambassador2bedroomSuite = Stays(name = "Ambassador 2-Bedroom Suite",
                                      description = "Located in the original 147-year-old Oriental Hotel, the suite exudes luxurious sophistication with beautiful views from a private glass conservatory. Lavishly decorated in shades of greens white to exude a state grandeur."
                                      )
 
-room_Selandia2bedroomSuite = Stays(name = "Selandia Two-Bedroom Suite",
+room_Selandia2bedroomSuite = Suites(name = "Selandia Two-Bedroom Suite",
                                    room_number = 0,
                                    bed_type = "King/2 Twins",
                                    size = "169SQM / 1,818SQF",
@@ -294,7 +240,7 @@ room_Selandia2bedroomSuite = Stays(name = "Selandia Two-Bedroom Suite",
                                    description = "The Selandia suite features two bedrooms, a very spacious living room, a dining area for 4 persons and study area. There are two balconies and two bathrooms with views over the river and city."                                  
                                 )
 
-room_RoyalSuite = Stays(name = "Royal Suite",
+room_RoyalSuite = Suites(name = "Royal Suite",
                         room_number = 0,
                         bed_type = "King Bed",
                         size = "306SQM / 3,294SQF",
@@ -308,7 +254,7 @@ room_RoyalSuite = Stays(name = "Royal Suite",
                         description = "Designed with visiting Royal guests in mind, this suite offers private access, meeting, fitness and spa facilities, as well as an option of additional bedrooms to accommodate entourage, family members or security detail."
                         )
 
-room_Oriental2bedroomSuite = Stays(name = "Oriental 2-Bedroom Suite",
+room_Oriental2bedroomSuite = Suites(name = "Oriental 2-Bedroom Suite",
                                    room_number = 0,
                                    bed_type = "King/2 Twins",
                                    size = "376SQM / 4,046SQF",
@@ -321,155 +267,3 @@ room_Oriental2bedroomSuite = Stays(name = "Oriental 2-Bedroom Suite",
                                    highlights = "Outdoor Terrace with River Views, Master Bedroom with River Views, Fully Equipped Kitchen, Large dining room for 16, Entertainment Room, 24-Hour Butler Service",
                                    description = "This two bedroom penthouse situated on the top floor of the hotel offers amazing full river views with a wrap around terrace of 57.6sqm. It features a private dining room, an entertainment room, multiple sitting areas & a kitchen."
                                    )
-
-#show data
-# Stays._showdata(room_Chaophraya)
-print(vars(room_Chaophraya))
-
-class RoomCatalog:
-    def __init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, room_count, contact):
-        Stays.__init__(self, name, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description, room_count, contact)
-        self.__room_list = []
-    
-    def selet_room(room, suite):
-        pass
-
-
-class Contact:
-    def __init__(self, header_info, general_enquires, reservation, sales_marketing, dining, weddings, events, spa):
-        self.__header_info = header_info
-        self.__general_enquires = general_enquires
-        self.__reservation = reservation
-        self.__sales_marketing = sales_marketing
-        self.__dining = dining
-        self.__weddings = weddings
-        self.__events = events
-        self.__spa = spa
-    pass
-
-
-class Payment:
-    def __init__(self, first_name, last_name, email, email_confirmation, country, phone_number, street_address, city, state_province, postal_code,date_of_birth, additional_info, terms_conditions, unpaid):
-        self._first_name = first_name
-        self._last_name = last_name
-        self._email = email
-        self._email_confirmation = email_confirmation
-        self._country = country
-        self._phone_number = phone_number
-        self._street_address = street_address
-        self._city = city
-        self._state_province = state_province
-        self._postal_code = postal_code
-        self._date_of_birth = date_of_birth
-        self._additional_info = additional_info
-        self._terms_conditions = terms_conditions
-        self._unpaid = unpaid
-    
-    def insert_card():
-        pass
-
-
-class Booking:
-    def __init__(self, calendar, check_in, check_out, room_price, total_price, currency):
-        self.__calendar = calendar
-        self.__check_in = check_in
-        self.__check_out = check_out
-        self.__room_price = room_price
-        self.__total_price = total_price
-        self.__currency = currency
-    def booked_info():
-        pass
-
-
-class CreditPayment:
-    def __init__(self, card_number, cardholder_name, expiration_date):
-        self.__card_number = card_number
-        self.__cardholder_name = cardholder_name
-        self.__expiration_date = expiration_date
-    pass
-
-
-class SpecialCode:
-    def __init__(self, iata_number, promo_code, group_code):
-        self.__iata_number = iata_number
-        self.__promo_code = promo_code
-        self.__group_code = group_code
-    pass
-
-
-class Hotel:
-    def __init__(self, name, branch, location):
-        self.__name = name
-        self.__branch = branch
-        self.__location = location
-    pass
-
-
-class User:
-    def __init__(self, email, password, status):
-        self._email = email
-        self._password = password
-        self._status = status
-
-    def watch_rooms():
-        pass
-
-
-class Member(User):
-    def __init__(self, email, password, status, member_id):
-        User.__init__(self, email, password, status)
-        self.__member_id = member_id
-    
-    def selet_room(start_date, end_date):
-        pass
-
-    def watch_rooms():
-        pass
-
-    def user_info():
-        pass
-
-    def has_code():
-        pass
-
-class Guest(User):
-    def __init__(self, email, password, status):
-        User.__init__(self, email, password, status)
-    pass
-
-
-class Admin(User):
-    def __init__(self, email, password, status):
-        User.__init__(self, email, password, status)
-    pass
-
-
-class BookingHistory:
-    def __init__(self, room_number, date, nights):
-        self.__room_number = room_number
-        self.__date = date
-        self.__nights = nights
-
-class SelectedRoom:
-    pass
-
-class CreditCard:
-    def __init(self):
-        pass
-
-    def card_info():
-        pass
-
-class PaymentInfo:
-    pass
-
-class ManageBooking:
-    pass
-
-class BookStays:
-    def __init__(self):
-        pass
-    def create_booking(option):
-        pass
-
-#new
