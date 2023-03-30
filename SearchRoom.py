@@ -1,4 +1,4 @@
-import roominstance as r
+import Roominstance as r
 
 class RoomCatalog:
     def __init__(self):
