@@ -6,7 +6,7 @@ class Register():
         self._fname = fname
         self._lname = lname
         self._email = email
-        self._password1 = password1 
+        self._password1 = password1
         self._password2 = password2
         self._phone_number = phone_number
 
@@ -47,4 +47,5 @@ register.add_infomation()
 print(register.user_dict)
 register.input_data()
 register.add_infomation()
+print(register.user_dict)
 print(register.user_dict)

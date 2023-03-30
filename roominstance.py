@@ -1,7 +1,7 @@
-from class import Class
-import class as c
-# all room
+from ClassStays import Rooms, Suites
+
 room_Chaophraya = Rooms(name = "Chao Phraya Room",
+                        type = "Room",
                         room_number = 0,
                         bed_type = "King Bed",
                         size = "35SQM / 377SQF",
@@ -17,6 +17,22 @@ room_Chaophraya = Rooms(name = "Chao Phraya Room",
 
 
 room_Deluxebalcony = Rooms(name = "Deluxe Balcony Room",
+                           type = "Room",
+                           room_number = 0,
+                           bed_type = "King Bed",
+                           size = "37SQM / 397SQF",
+                           toilet_type = "Japanese Toilets",
+                           complimentary = "Complimentary",
+                           speaker = "Bluetooth Speaker",
+                           coffee_machine = True,
+                           bathrobes = "Bathrobes",
+                           details = "Each of these rooms boasts a private 6sqm balcony on which to relax and enjoy views of the bustling river life and the pool. With floor-to-ceiling windows, wooden floors, rugs and furnishings inspired by nature, soft natural tones and Thai décor, these 37sqm rooms add to the overall resort-style ambience.",
+                           highlights = "Floor-To-Ceiling Windows, Balcony with Seating, Bathtub & Walk-In Shower, 24-Hour Butler Service",
+                           description = "Elegant rooms with wooden floors, nature inspired rugs and furnishings with a private balcony and seating area. The rooms offer a Thai touch, giving a unique experience in a resort-style ambience with pool and river views.",
+                           )
+
+room_Deluxepremier = Rooms(name = "Deluxe Premier Room",
+                          type = "Room",
                           room_number = 0,
                           bed_type = "King Bed",
                           size = "37SQM / 397SQF",
@@ -31,6 +47,7 @@ room_Deluxebalcony = Rooms(name = "Deluxe Balcony Room",
                         )
 
 room_Deluxepremier = Rooms(name = "Deluxe Premier Room",
+                           type = "Room",
                            room_number = 0,
                            bed_type = "King Bed / Twin Beds",
                            size = "43SQM / 463SQF",
@@ -42,9 +59,11 @@ room_Deluxepremier = Rooms(name = "Deluxe Premier Room",
                            details = "These 43sqm rooms are located in the River Wing and each boast a large sofa to relax and enjoy river and pool views. Décor is inspired by life on the Chao Phraya river with wooden floors and Thai touches such as teak furniture and beautiful Thai silk fabrics, while a selection of prints from the hotels rich collection of artworks adorn the walls. Both king and twin beds are available.",
                            highlights = "River View, Bathtub & Walk-In Shower, 24-Hour Butler Service, Corner Sofa",
                            description = "Large rooms with sofa and sitting area to relax, offer wooden floors and nature inspired rugs and furnishing with a Thai touch giving a unique experience in a resort style ambiance with views of the river and city."
-                            )
+                           )
 
-room_Madarin = Rooms(name = "Mandarin Room",
+
+room_Mandarin = Rooms(name = "Mandarin Room",
+                     type = "Room",
                      room_number = 0,
                      bed_type = "King Bed",
                      size = "63SQM / 677SQF",
@@ -59,6 +78,7 @@ room_Madarin = Rooms(name = "Mandarin Room",
                     )
 
 room_State = Rooms(name = "State Room",
+                   type = "Room",
                    room_number = 0,
                    bed_type = "King Bed / Twin Beds",
                    size = "61SQM / 657SQF",
@@ -73,6 +93,7 @@ room_State = Rooms(name = "State Room",
                    )
 
 room_JuniorterraceSuite = Suites(name = "Junior Terrace Suite",
+                                type = "Suite", 
                                 room_number = 0,
                                 bed_type = "King Bed",
                                 size = "97SQM / 1,043SQF",
@@ -87,6 +108,7 @@ room_JuniorterraceSuite = Suites(name = "Junior Terrace Suite",
                                 )
 
 room_ChaophrayaSuite = Suites(name = "Chao Phraya Suite",
+                             type = "Suite",
                              room_number = 0,
                              bed_type = "King Bed",
                              size = "83SQM / 892SQF",
@@ -101,6 +123,7 @@ room_ChaophrayaSuite = Suites(name = "Chao Phraya Suite",
                             )
 
 room_AuthorsSuite = Suites(name = "Authors' Suites",
+                          type = "Suite",
                           room_number = 0,
                           bed_type = "King Bed / Twin Beds",
                           size = "101SQM / 1,861SQF",
@@ -115,76 +138,157 @@ room_AuthorsSuite = Suites(name = "Authors' Suites",
                         )
 
 room_Deluxe1bedroomSuite = Suites(name = "Deluxe One-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King Bed / Twin Beds",
-                                        size = "83SQM / 892SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
-                                        highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
-                                        description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
-                                        )
+                                  type = "Suite",
+                                  room_number = 0,
+                                  bed_type = "King Bed / Twin Beds",
+                                  size = "83SQM / 892SQF",
+                                  toilet_type = "Japanese Toilets",
+                                  complimentary = "Complimentary",
+                                  speaker = "Bose Sound Bar",
+                                  coffee_machine = True,
+                                  bathrobes = "Silk Kimonos",
+                                  details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
+                                  highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
+                                  description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
+                                  )
 
 room_Deluxe2bedroomSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King/Twin Beds / Twin/Twin Beds",
-                                        size = "125SQM / 1,344SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
-                                        highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
-                                        description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
-                                        )
+                                  type = "Suite",
+                                  room_number = 0,
+                                  bed_type = "King/Twin Beds / Twin/Twin Beds",
+                                  size = "125SQM / 1,344SQF",
+                                  toilet_type = "Japanese Toilets",
+                                  complimentary = "Complimentary",
+                                  speaker = "Bose Sound Bar",
+                                  coffee_machine = True,
+                                  bathrobes = "Silk Kimonos",
+                                  details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
+                                  highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
+                                  description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
+                                  )
 
 room_Deluxe1bedroomthemeSuite = Suites(name = "Deluxe One-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King Bed / Twin Beds",
-                                        size = "83SQM / 892SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
-                                        highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
-                                        description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
-                                        )
+                                      type = "Suite",
+                                      room_number = 0,
+                                      bed_type = "King Bed / Twin Beds",
+                                      size = "83SQM / 892SQF",
+                                      toilet_type = "Japanese Toilets",
+                                      complimentary = "Complimentary",
+                                      speaker = "Bose Sound Bar",
+                                      coffee_machine = True,
+                                      bathrobes = "Silk Kimonos",
+                                      details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
+                                      highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
+                                      description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
+                                      )
 
 room_Deluxe2bedroomthemeSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
-                                        room_number = 0,
-                                        bed_type = "King/Twin Beds / Twin/Twin Beds",
-                                        size = "125SQM / 1,344SQF",
-                                        toilet_type = "Japanese Toilets",
-                                        complimentary = "Complimentary",
-                                        speaker = "Bose Sound Bar",
-                                        coffee_machine = True,
-                                        bathrobes = "Silk Kimonos",
-                                        details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
-                                        highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
-                                        description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
-                                        )
+                                      type = "Suite",
+                                      room_number = 0,
+                                      bed_type = "King/Twin Beds / Twin/Twin Beds",
+                                      size = "125SQM / 1,344SQF",
+                                      toilet_type = "Japanese Toilets",
+                                      complimentary = "Complimentary",
+                                      speaker = "Bose Sound Bar",
+                                      coffee_machine = True,
+                                      bathrobes = "Silk Kimonos",
+                                      details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
+                                      highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
+                                      description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
+                                      )
 
 room_Premier1bedroom = Suites(name = "Premier 1-Bedroom Suite",
-                            room_number = 0,
-                            bed_type = "King Bed / Twin Beds",
-                            size = "108SQM / 1,163SQF",
-                            toilet_type = "Japanese Toilets",
-                            complimentary ="Complimentary",
-                            speaker = "Bose Sound Bar",
-                            coffee_machine = True,
-                            bathrobes = "Silk Kimonos",
-                            details = "These spacious 108sqm suites overlook the French Ambassador's residence, with breath-taking views of the Chao Phraya river, a private balcony and sitting area. Elegantly decorated, the Premier Suites have wooden floors in the living and dining areas, complemented perfectly by rugs and prints from the hotel's art collection that are inspired by the River of Kings. The bedroom features a subtle orchid theme, a dressing and sitting area and a walk-in closet.",
-                            highlights = "Balcony with Seating, Dining Area For 5, Spacious Living Room and Walk-in Closet, High Bar-style Table, 24-Hour Butler Service",
-                            description = "This luxurious suite has an entrance area leading to a spacious sitting area & desk with a separate dining area for 5 people. It has a private balcony with seating area. The specious bedroom has a dressing table and sitting area."
-                             )
+                              type = "Suite",
+                              room_number = 0,
+                              bed_type = "King Bed / Twin Beds",
+                              size = "108SQM / 1,163SQF",
+                              toilet_type = "Japanese Toilets",
+                              complimentary ="Complimentary",
+                              speaker = "Bose Sound Bar",
+                              coffee_machine = True,
+                              bathrobes = "Silk Kimonos",
+                              details = "These spacious 108sqm suites overlook the French Ambassador's residence, with breath-taking views of the Chao Phraya river, a private balcony and sitting area. Elegantly decorated, the Premier Suites have wooden floors in the living and dining areas, complemented perfectly by rugs and prints from the hotel's art collection that are inspired by the River of Kings. The bedroom features a subtle orchid theme, a dressing and sitting area and a walk-in closet.",
+                              highlights = "Balcony with Seating, Dining Area For 5, Spacious Living Room and Walk-in Closet, High Bar-style Table, 24-Hour Butler Service",
+                              description = "This luxurious suite has an entrance area leading to a spacious sitting area & desk with a separate dining area for 5 people. It has a private balcony with seating area. The specious bedroom has a dressing table and sitting area."
+                              )
 
 room_Premier2bedroomSuite = Suites(name = "Premier 2-Bedroom Suite",
+                                  type = "Suite",
+                                  room_number = 0,
+                                  bed_type = "King Bed / Twin Beds",
+                                  size = "83SQM / 892SQF",
+                                  toilet_type = "Japanese Toilets",
+                                  complimentary = "Complimentary",
+                                  speaker = "Bose Sound Bar",
+                                  coffee_machine = True,
+                                  bathrobes = "Silk Kimonos",
+                                  details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
+                                  highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
+                                  description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
+                                  )
+
+room_Deluxe2bedroomSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
+                                  type = "Suite",
+                                  room_number = 0,
+                                  bed_type = "King/Twin Beds / Twin/Twin Beds",
+                                  size = "125SQM / 1,344SQF",
+                                  toilet_type = "Japanese Toilets",
+                                  complimentary = "Complimentary",
+                                  speaker = "Bose Sound Bar",
+                                  coffee_machine = True,
+                                  bathrobes = "Silk Kimonos",
+                                  details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
+                                  highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
+                                  description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
+                                  )
+
+room_Deluxe1bedroomthemeSuite = Suites(name = "Deluxe One-Bedroom Theme Suite",
+                                      type = "Suite",
+                                      room_number = 0,
+                                      bed_type = "King Bed / Twin Beds",
+                                      size = "83SQM / 892SQF",
+                                      toilet_type = "Japanese Toilets",
+                                      complimentary = "Complimentary",
+                                      speaker = "Bose Sound Bar",
+                                      coffee_machine = True,
+                                      bathrobes = "Silk Kimonos",
+                                      details = "Inspired by historic ships of the 1800s that sailed and traded in Bangkok, these 83sqm suites are located on the 16th floor and offer river views and a private 6sqm balcony with seating. Each suite features a spacious living area with a large sofa, wooden floors and a dining table. The large bedroom area has a dressing area with walk-in closet. The bathroom features Italian marble with a walk-in shower and separate bath tub.",
+                                      highlights = "Located on High Floor, Balcony with Seating, Spacious Living Room, Dining Area, 24-Hour Butler Service",
+                                      description = "This 1-bed suite is on the top floor of the hotel with a balcony offering views of the river. The suite has a large sitting area, a dining table and an additional powder room. The bedroom has a dressing area and a walk in closet.",
+                                      )
+
+room_Deluxe2bedroomthemeSuite = Suites(name = "Deluxe Two-Bedroom Theme Suite",
+                                      type = "Suite",
+                                      room_number = 0,
+                                      bed_type = "King/Twin Beds / Twin/Twin Beds",
+                                      size = "125SQM / 1,344SQF",
+                                      toilet_type = "Japanese Toilets",
+                                      complimentary = "Complimentary",
+                                      speaker = "Bose Sound Bar",
+                                      coffee_machine = True,
+                                      bathrobes = "Silk Kimonos",
+                                      details = "These 125sqm two-bedroom Deluxe Suites are ideal for families and overlook the pool and river. Guests can relax and unwind on their private balcony with a seating area, or in the living area that offers separate sitting and dining sections for family and friends to enjoy. The master bedroom has a dressing and sitting area with a large walk-in closet, while the bathroom features Italian marble and a separate shower and bath.",
+                                      highlights = "Located on High Floor of River Wing, Balcony with Seating, Interconntecting Room, 24-Hour Butler Service",
+                                      description = "An ideal suite for families, this two bedroom suite overlooking the pool and the river, features a private balcony with a sitting area. The living area offers separate sitting and dining areas perfect to relax and unwind"
+                                      )
+
+room_Premier1bedroom = Suites(name = "Premier 1-Bedroom Suite",
+                              type = "Suite",
+                              room_number = 0,
+                              bed_type = "King Bed / Twin Beds",
+                              size = "108SQM / 1,163SQF",
+                              toilet_type = "Japanese Toilets",
+                              complimentary ="Complimentary",
+                              speaker = "Bose Sound Bar",
+                              coffee_machine = True,
+                              bathrobes = "Silk Kimonos",
+                              details = "These spacious 108sqm suites overlook the French Ambassador's residence, with breath-taking views of the Chao Phraya river, a private balcony and sitting area. Elegantly decorated, the Premier Suites have wooden floors in the living and dining areas, complemented perfectly by rugs and prints from the hotel's art collection that are inspired by the River of Kings. The bedroom features a subtle orchid theme, a dressing and sitting area and a walk-in closet.",
+                              highlights = "Balcony with Seating, Dining Area For 5, Spacious Living Room and Walk-in Closet, High Bar-style Table, 24-Hour Butler Service",
+                              description = "This luxurious suite has an entrance area leading to a spacious sitting area & desk with a separate dining area for 5 people. It has a private balcony with seating area. The specious bedroom has a dressing table and sitting area."
+                              )
+
+room_Premier2bedroomSuite = Suites(name = "Premier 2-Bedroom Suite",
+                                  type = "Suite",
                                   room_number = "0",
                                   bed_type = "King/Twin Beds / Twin/Twin Beds",
                                   size = "150SQM / 1,615SQF",
@@ -199,20 +303,37 @@ room_Premier2bedroomSuite = Suites(name = "Premier 2-Bedroom Suite",
                                   )
 
 room_Siam1bedroomSuite = Suites(name = "Siam One-Bedroom Suite",
-                                 room_number = 0,
-                                 bed_type = "King Bed",
-                                 size = "107SQM / 1,152SQF",
-                                 toilet_type = "Japanese Toilets",
-                                 complimentary = "Complimentary",
-                                 speaker = "Bose Sound Bar",
-                                 coffee_machine = True,
-                                 bathrobes = "Silk Kimonos",
-                                 details = "Furnished with Thai antiques, magnificent Persian carpets and a varied art collection, this Thai-styled suite is beautifully appointed and eminently comfortable. Large floor-to-ceiling windows open out over the river, while a carved lotus cornice is one of many local touches. The 107sqm suite features a separate living area, as well as a dining area for five guests. Its private balcony with seating area overlooks the river.",
-                                 highlights = "Thai Antique Inspired Design from Northern Thailand, Balcony with Seating, Spacious Living Room, Dining Area For 5, Bedroom with Walk-In Wardrobe, 24-Hour Butler Service",
-                                 description = "Inspired by the beauty of Northern Thailand, this exquisite one bedroom suite features a separate elegant living and dining spaces, a large King size bed with dressing area. As well as a balcony and sitting area."
-                                 )
+                                type = "Suite",
+                                room_number = 0,
+                                bed_type = "King Bed",
+                                size = "107SQM / 1,152SQF",
+                                toilet_type = "Japanese Toilets",
+                                complimentary = "Complimentary",
+                                speaker = "Bose Sound Bar",
+                                coffee_machine = True,
+                                bathrobes = "Silk Kimonos",
+                                details = "Furnished with Thai antiques, magnificent Persian carpets and a varied art collection, this Thai-styled suite is beautifully appointed and eminently comfortable. Large floor-to-ceiling windows open out over the river, while a carved lotus cornice is one of many local touches. The 107sqm suite features a separate living area, as well as a dining area for five guests. Its private balcony with seating area overlooks the river.",
+                                highlights = "Thai Antique Inspired Design from Northern Thailand, Balcony with Seating, Spacious Living Room, Dining Area For 5, Bedroom with Walk-In Wardrobe, 24-Hour Butler Service",
+                                description = "Inspired by the beauty of Northern Thailand, this exquisite one bedroom suite features a separate elegant living and dining spaces, a large King size bed with dressing area. As well as a balcony and sitting area."
+                                )
 
 room_Ambassador2bedroomSuite = Suites(name = "Ambassador 2-Bedroom Suite",
+                                     type = "Suite",
+                                     room_number = 0,
+                                     bed_type = "King Bed",
+                                     size = "107SQM / 1,152SQF",
+                                     toilet_type = "Japanese Toilets",
+                                     complimentary = "Complimentary",
+                                     speaker = "Bose Sound Bar",
+                                     coffee_machine = True,
+                                     bathrobes = "Silk Kimonos",
+                                     details = "Furnished with Thai antiques, magnificent Persian carpets and a varied art collection, this Thai-styled suite is beautifully appointed and eminently comfortable. Large floor-to-ceiling windows open out over the river, while a carved lotus cornice is one of many local touches. The 107sqm suite features a separate living area, as well as a dining area for five guests. Its private balcony with seating area overlooks the river.",
+                                     highlights = "Thai Antique Inspired Design from Northern Thailand, Balcony with Seating, Spacious Living Room, Dining Area For 5, Bedroom with Walk-In Wardrobe, 24-Hour Butler Service",
+                                     description = "Inspired by the beauty of Northern Thailand, this exquisite one bedroom suite features a separate elegant living and dining spaces, a large King size bed with dressing area. As well as a balcony and sitting area."
+                                     )
+
+room_Ambassador2bedroomSuite = Suites(name = "Ambassador 2-Bedroom Suite",
+                                     type = "Suite",
                                      room_number = 0,
                                      bed_type = "King/Twin Beds",
                                      size = "173SQM / 567SQF",
@@ -227,6 +348,7 @@ room_Ambassador2bedroomSuite = Suites(name = "Ambassador 2-Bedroom Suite",
                                      )
 
 room_Selandia2bedroomSuite = Suites(name = "Selandia Two-Bedroom Suite",
+                                   type = "Suite",
                                    room_number = 0,
                                    bed_type = "King/2 Twins",
                                    size = "169SQM / 1,818SQF",
@@ -238,9 +360,10 @@ room_Selandia2bedroomSuite = Suites(name = "Selandia Two-Bedroom Suite",
                                    details = "This two-bedroom suite is named after the Selandia which in 1912 was the world&#39;s first diesel-powered ocean-going ship that travelled from Copenhagen to Bangkok. The 169sqm suite is beautifully decorated in hues of pale ivory against a background of hazy blues and rich scarlets. Furnished with silk throughout, every detail from brass-cornered tables to plush seating exudes luxurious elegance. It features a large living and dining area and two balconies.",
                                    highlights = "Two Bedrooms, Located on a High Floor, Spacious Living Room with Dining Area, Two Balconies with River and City Views, Master Bedroom with Walk-in Closet24-Hour Butler Service",
                                    description = "The Selandia suite features two bedrooms, a very spacious living room, a dining area for 4 persons and study area. There are two balconies and two bathrooms with views over the river and city."                                  
-                                )
+                                   )
 
 room_RoyalSuite = Suites(name = "Royal Suite",
+                        type = "Suite",
                         room_number = 0,
                         bed_type = "King Bed",
                         size = "306SQM / 3,294SQF",
@@ -255,6 +378,7 @@ room_RoyalSuite = Suites(name = "Royal Suite",
                         )
 
 room_Oriental2bedroomSuite = Suites(name = "Oriental 2-Bedroom Suite",
+                                   type = "Suite",
                                    room_number = 0,
                                    bed_type = "King/2 Twins",
                                    size = "376SQM / 4,046SQF",
