@@ -34,4 +34,4 @@ room.add_room(r.room_AuthorsSuite)
 
 rooms = room.user_select("Rooms")
 
-print(rooms)
+print(rooms[0].get_name())

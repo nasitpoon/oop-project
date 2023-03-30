@@ -13,7 +13,7 @@ class Member(User):
         User.__init__(self, email, password, status)
         self.__member_id = member_id
     
-    def selet_room(start_date, end_date):
+    def select_room(start_date, end_date):
         pass
 
     def watch_rooms():

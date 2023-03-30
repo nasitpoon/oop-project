@@ -65,9 +65,6 @@ class Rooms(Stays):
     def __str__(self):
         return self._name + '\n' + self._description
     
-    def get_name(self):
-        return self._name
-    
     def selected_room(room, suite):
         pass
 
