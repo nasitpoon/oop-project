@@ -13,10 +13,11 @@ class Member(User):
         self._member_id = member_id
         super().__init__(email, password, status)
     
-    def login(self, email = '', member_id = '', password = ''):
+    def login(self, member_id = '', max_attempts = 3) -> bool:
         self._member_id = member_id
-        super().__init__(email,password,self._member_id)
-        while(True):
+        attempts = 0
+        # super().__init__(email,password,self._member_id)
+        while(attempts <= max_attempts):
             self._email = str(input('Enter email : '))
             self._password = str(input('Enter password : '))
             if self._email in Register.user_email_password.keys():
@@ -28,7 +29,13 @@ class Member(User):
                     break
                 else:
                     print('Your password is not correct')
-        
+                    attempts+=1
+            elif self._email not in Register.user_email_password.keys():
+                    print('Not have this email')
+                    
+        print("Max login attempts exceeded")
+
+
     def select_room(start_date, end_date):
         pass
 
@@ -54,3 +61,4 @@ class Admin(User):
 
 test = Member(User)
 test.login()
+test1 = Member(User)
