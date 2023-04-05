@@ -10,7 +10,7 @@ class Account():
         self._fname = fname
         self._lname = lname
         self._email = email
-        self._password1 = password1 
+        self._password1 = password1
         self._password2 = password2
         self._phone_number = phone_number
 
@@ -53,6 +53,7 @@ class Account():
                 self._email = str(input('Enter email :'))
             else:
                 break
+
         
     def input_login(self):
         self.login_email = str(input('Enter email :'))
@@ -88,4 +89,7 @@ test =  Account()
 test.register()
 test.register()
 test.login()
+
+ 
+
 
