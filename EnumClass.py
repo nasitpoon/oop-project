@@ -10,3 +10,7 @@ class RoomStatus(Enum):
 
 class PaymentStatus(Enum):
     UNPAID, PENDING, COMPLETE, CANCELLED, REFUNDED = 1, 2, 3, 4, 5
+
+
+class UserStatus(Enum):
+    ACTIVE, UNACTIVE, BANNED = 1, 2, 3

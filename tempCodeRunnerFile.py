@@ -1,5 +1,5 @@
-room = RoomCatalog()  
-# # print("hhh")r
-# name,description = room.user_select("Rooms")
-# print(name)
-# print(description)
+h.add_book(b1)
+h.add_book(b2)
+h.add_book(b3)
+h.add_book(b4)
+print(h)

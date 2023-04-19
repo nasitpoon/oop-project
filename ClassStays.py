@@ -1,75 +1,82 @@
-class Stays:
-    def __init__(self, name, type, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description):
-        self._name = name
-        self._type = type
-        self._room_number = room_number
-        self._bed_type = bed_type
-        self._size = size
-        self._toilet_type = toilet_type
-        self._complimentary = complimentary
-        self._speaker = speaker
-        self._coffee_machine = coffee_machine
-        self._bathrobes = bathrobes
-        self._details = details
-        self._highlights = highlights
-        self._description = description
-        # self._number_of_room = number_of_room
-        self._contact = "48 Oriental Avenue, Bangkok 10500, Thailand +66 (0) 2 659 9000 mobkk-reservations@mohg.com"
+class Room:
+    def __init__(self, name = '', type = '', room_number = 0, bed_type = '', size = '', toilet_type = '', complimentary = '', speaker = '', bathrobes = '', details = '', highlights = '', description = ''):
+        self.__name = name
+        self.__type = type
+        self.__room_price = None
+        self.__room_number = room_number
+        self.__bed_type = bed_type
+        self.__size = size
+        self.__toilet_type = toilet_type
+        self.__complimentary = complimentary
+        self.__speaker = speaker
+        self.__coffee_machine = True
+        self.__bathrobes = bathrobes
+        self.__details = details
+        self.__highlights = highlights
+        self.__description = description
+        self.__contact = "48 Oriental Avenue, Bangkok 10500, Thailand +66 (0) 2 659 9000 mobkk-reservations@mohg.com"
+        self.__reserved = False
+
+
+    def reserve(self):
+        if not self.__reserved:
+            self.__reserved = True
+            print(f"Room {self.__room_number} has been reserved.")
+        else:
+            print(f"Room {self.__room_number} is already reserved.")
 
     
     def get_name(self):
-        return self._name
+        return self.__name
+    
+    def get_room_number(self):
+        return self.__room_number
 
     def get_type(self):
-        return self._type
+        return self.__type
+    
+    def get_price(self):
+        return self.__room_price
 
     def get_room_number(self):
-        return self._room_number
+        return self.__room_number
 
     def get_bed_type(self):
-        return self._bed_type
+        return self.__bed_type
 
     def get_size(self):
-        return self._size
+        return self.__size
 
     def get_toilet_type(self):
-        return self._toilet_type
+        return self.__toilet_type
 
     def get_complimentary(self):
-        return self._complimentary
+        return self.__complimentary
 
     def get_speaker(self):
-        return self._speaker
+        return self.__speaker
 
     def get_coffee_machine(self):
-        return self._coffee_machine
+        return self.__coffee_machine
 
     def get_bathrobes(self):
-        return self._bathrobes
+        return self.__bathrobes
 
     def get_details(self):
-        return self._details
+        return self.__details
 
     def get_highlights(self):
-        return self._highlights
+        return self.__highlights
 
     def get_description(self):
-        return self._description
-
-
-class Rooms(Stays):
-    def __init__(self, name, type, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description):
-        Stays.__init__(self, name, type, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description)
-        self._reserved_room = []
-
-    def __str__(self):
-        return self._name + '\n' + self._description
+        return self.__description
     
-    def selected_room(room, suite):
-        pass
+    def get_reserved(self):
+        return self.__reserved
+    
+    def set_description(self,data):
+        self.__description = data
 
-class Suites(Stays):
-    def __init__(self, name, type, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description):
-        Stays.__init__(self, name, type, room_number, bed_type, size, toilet_type, complimentary, speaker, coffee_machine, bathrobes, details, highlights, description)
-        self._reserved_room = []
-    pass
+    def set_price(self, price):
+        self.__room_price = price
+    
