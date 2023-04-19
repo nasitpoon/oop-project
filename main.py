@@ -1,4 +1,4 @@
-from SearchRoom import RoomCatalog
+from SearchRoom import RoomCatalog, total_cost
 from Booking import Booking, BookingHistory
 from User import Admin, User, Member
 from Payment import Payment
@@ -42,14 +42,15 @@ admin.update_price(r.room_Ambassador2bedroomSuite, 34000)
 admin.update_price(r.room_Oriental2bedroomSuite, 89000)
 admin.update_price(r.room_RoyalSuite, 45000)
 admin.update_price(r.room_Selandia2bedroomSuite, 56000)
-admin.update_price(r.room_Ambassador2bedroomSuite, 34000)
-admin.update_price(r.room_Oriental2bedroomSuite, 89000)
-admin.update_price(r.room_RoyalSuite, 45000)
-admin.update_price(r.room_Selandia2bedroomSuite, 56000)
-admin.update_price(r.room_Ambassador2bedroomSuite, 34000)
-admin.update_price(r.room_Oriental2bedroomSuite, 89000)
-admin.update_price(r.room_RoyalSuite, 45000)
-admin.update_price(r.room_Selandia2bedroomSuite, 56000)
+admin.update_price(r.room_Chaophraya, 22000)
+
+
+
+c1 = total_cost('1-1-2023', '4-1-2023', 'Chao Phraya Room', Catalog)
+print(c1.get_total_cost())
+
+c2 = total_cost('1-1-2023', '4-1-2023', 'Royal Suite', Catalog)
+print(c2.get_total_cost())
 
 # m1 = Member('Vivat', 'Techakosol', 'nickvivat@hotmail.com', 'n', '0915752833')
 # p1 = Payment(m1, 8235000, 'Credit')
@@ -67,7 +68,6 @@ h = BookingHistory()
 # h.add_book(b1)
 # h.add_book(b2)
 # h.add_book(b3)
-print(h)
 
 @app.get("/login")
 async def login(fname : str, lname : str, email : str, password : str, phone : str):
@@ -79,17 +79,16 @@ async def login(fname : str, lname : str, email : str, password : str, phone : s
 async def payment(total_cost : int, method : str):
     global p1
     p1 = Payment(m1, total_cost, method)
+    p1.process_payment()
     return p1
 
 
 @app.get("/booking")
 async def booking(start_date : str, end_date : str, room_type : str):
     b1 = Booking(start_date, end_date, room_type, m1, p1)
-    b1.make_payment(p1)
     h.add_book(b1)
 
     return b1
-
 
 
 @app.get("/booking_history")

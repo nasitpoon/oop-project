@@ -2,7 +2,7 @@ class Room:
     def __init__(self, name = '', type = '', room_number = 0, bed_type = '', size = '', toilet_type = '', complimentary = '', speaker = '', bathrobes = '', details = '', highlights = '', description = ''):
         self.__name = name
         self.__type = type
-        self.__room_price = None
+        self.__room_price = 22000
         self.__room_number = room_number
         self.__bed_type = bed_type
         self.__size = size

@@ -1,6 +1,6 @@
 import uuid
 from Booking import Booking
-from Register import Account
+from register import Account
 class User:
     def __init__(self, email, password, status):
         self._email = email
@@ -9,6 +9,7 @@ class User:
 
     def watch_rooms(self, room_catalog, type):
         return room_catalog.user_select(type)
+    
 
 
 class Member(User):

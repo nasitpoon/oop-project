@@ -1,4 +1,4 @@
-class Account():
+class Account:
 
     user_dict = {}
     login_email = None
@@ -80,25 +80,10 @@ class System():
     
     def add_account (self, user):
         self.__account_list.append(user)
-         
-class User():
-    def register(self):
-        pass
+
 
 
 # test =  Account()
 # test.register()
 # test.register()
 # test.login()
-
-register = Register()
-register.input_data()
-register.add_infomation()
-print(register.user_dict)
-register.input_data()
-register.add_infomation()
-print(register.user_dict)
-register.input_data()
-register.add_infomation()
-print(register.user_dict)
-print(register.user_dict)

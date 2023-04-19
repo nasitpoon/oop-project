@@ -1,6 +1,7 @@
 import uuid
 from ClassStays import Room
 from DateCal import DateCal
+from SearchRoom import total_cost
     
 
 class Booking:
@@ -17,8 +18,8 @@ class Booking:
         self.__total_cost = self.__room_price * self.__nights
         self.__room_number = Room().get_room_number()
         self.__room_type = room_type
-        self.__member_info = {"member_id": member.get_member_id(),"name": member.get_name(), "email": member.get_email(), "phone": member.get_phone()}
-        self.__payment_info = {"method": payment.get_method(), "transaction_id": payment.get_transaction_id(), "amount": payment.get_amount(), "date_time": payment.get_date()}
+        self.__member_info = member
+        self.__payment_info = payment
         Booking.counter += 1
         self.__booking_number = Booking.counter
 
